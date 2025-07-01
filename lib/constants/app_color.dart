@@ -7,4 +7,6 @@ class AppColors {
   static const backgroundColor = Color(0xFFF5F5F5);
   static const textColor = Color(0xFF333333);
   static const lightTextColor = Color(0xFF757575);
+
+  static var hintColor;
 }

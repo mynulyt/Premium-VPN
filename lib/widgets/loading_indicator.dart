@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
+import 'package:pree_vpn/constants/app_color.dart';
 
 class LoadingIndicator extends StatelessWidget {
   final String? message;
@@ -15,7 +15,7 @@ class LoadingIndicator extends StatelessWidget {
           const CircularProgressIndicator(color: AppColors.primaryColor),
           if (message != null) ...[
             const SizedBox(height: 20),
-            Text(message!, style: const TextStyle(color: AppColors.hintColor)),
+            Text(message!, style: TextStyle(color: AppColors.hintColor)),
           ],
         ],
       ),
