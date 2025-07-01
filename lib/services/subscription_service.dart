@@ -44,9 +44,9 @@ class SubscriptionService {
       return [];
     }
 
-    const Set<String> _kIds = {_monthlySubscriptionId, _yearlySubscriptionId};
+    const Set<String> kIds = {_monthlySubscriptionId, _yearlySubscriptionId};
     final ProductDetailsResponse response = await _inAppPurchase
-        .queryProductDetails(_kIds);
+        .queryProductDetails(kIds);
 
     if (response.notFoundIDs.isNotEmpty) {
       print('Subscription products not found: ${response.notFoundIDs}');
