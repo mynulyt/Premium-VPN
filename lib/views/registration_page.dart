@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:premium_vpn/controllers/auth_controller.dart';
-import 'package:premium_vpn/constants/strings.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
-import 'package:premium_vpn/utils/validators.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
