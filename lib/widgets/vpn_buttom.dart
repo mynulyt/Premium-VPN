@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:premium_vpn/constants/strings.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
+import 'package:pree_vpn/constants/app_color.dart';
 
 class VpnButton extends StatelessWidget {
   final bool isConnected;
@@ -15,7 +14,7 @@ class VpnButton extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, dynamic Strings) {
     return SizedBox(
       width: 150,
       height: 150,
