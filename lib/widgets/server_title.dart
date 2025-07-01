@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:premium_vpn/models/server_model.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
+import 'package:pree_vpn/constants/app_color.dart';
+import 'package:pree_vpn/models/server_model.dart';
 
 class ServerTile extends StatelessWidget {
   final Server server;
