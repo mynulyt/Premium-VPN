@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pree_vpn/constants/app_color.dart';
 import 'package:provider/provider.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:premium_vpn/controllers/subscription_controller.dart';
-import 'package:premium_vpn/constants/strings.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
 
 class PremiumPage extends StatelessWidget {
   const PremiumPage({super.key});
@@ -26,7 +23,7 @@ class PremiumPage extends StatelessWidget {
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text(
+            Text(
               Strings.premiumFeatures,
               style: TextStyle(fontSize: 16, color: AppColors.hintColor),
               textAlign: TextAlign.center,
@@ -108,7 +105,7 @@ class SubscriptionCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 package.storeProduct.description,
-                style: const TextStyle(color: AppColors.hintColor),
+                style: TextStyle(color: AppColors.hintColor),
               ),
               const SizedBox(height: 16),
               Text(
