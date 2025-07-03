@@ -1,6 +1,6 @@
-import 'package:premium_vpn/models/server_model.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
+import 'package:pree_vpn/models/server_model.dart';
 
 class VpnService {
   final FlutterSecureStorage _storage = const FlutterSecureStorage();
