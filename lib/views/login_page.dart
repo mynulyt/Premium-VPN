@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:premium_vpn/controllers/auth_controller.dart';
-import 'package:premium_vpn/constants/strings.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
-import 'package:premium_vpn/views/register_page.dart';
-import 'package:premium_vpn/utils/validators.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -28,21 +23,21 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
-    
+
     setState(() => _isLoading = true);
-    
+
     final authController = Provider.of<AuthController>(context, listen: false);
     final success = await authController.login(
       _emailController.text.trim(),
       _passwordController.text.trim(),
     );
-    
+
     setState(() => _isLoading = false);
-    
+
     if (!success) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text(Strings.somethingWentWrong)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text(Strings.somethingWentWrong)));
     }
   }
 
@@ -70,8 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: const InputDecoration(
                   labelText: Strings.email,
                   prefixIcon: Icon(Icons.email),
-                validator: Validators.validateEmail,
-                keyboardType: TextInputType.emailAddress,
+                  validator: Validators.validateEmail,
+                  keyboardType: TextInputType.emailAddress,
+                ),
               ),
               const SizedBox(height: 20),
               TextFormField(
@@ -79,8 +75,9 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: const InputDecoration(
                   labelText: Strings.password,
                   prefixIcon: Icon(Icons.lock),
-                obscureText: true,
-                validator: Validators.validatePassword,
+                  obscureText: true,
+                  validator: Validators.validatePassword,
+                ),
               ),
               const SizedBox(height: 10),
               Align(
@@ -97,9 +94,10 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _login,
-                  child: _isLoading 
-                      ? const CircularProgressIndicator(color: Colors.white)
-                      : const Text(Strings.login),
+                  child:
+                      _isLoading
+                          ? const CircularProgressIndicator(color: Colors.white)
+                          : const Text(Strings.login),
                 ),
               ),
               const SizedBox(height: 20),
@@ -111,7 +109,9 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const RegisterPage()),
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterPage(),
+                        ),
                       );
                     },
                     child: const Text(Strings.register),
