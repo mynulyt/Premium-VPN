@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pree_vpn/constants/app_color.dart';
+import 'package:pree_vpn/views/premium_page.dart';
+import 'package:pree_vpn/views/server_list_page.dart';
+import 'package:pree_vpn/views/settings_page.dart';
+import 'package:pree_vpn/widgets/vpn_buttom.dart';
 import 'package:provider/provider.dart';
-import 'package:premium_vpn/controllers/vpn_controller.dart';
-import 'package:premium_vpn/constants/strings.dart';
-import 'package:premium_vpn/constants/app_colors.dart';
-import 'package:premium_vpn/views/server_list_page.dart';
-import 'package:premium_vpn/views/premium_page.dart';
-import 'package:premium_vpn/views/settings_page.dart';
-import 'package:premium_vpn/widgets/vpn_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -79,17 +77,14 @@ class HomeContent extends StatelessWidget {
                 const SizedBox(height: 10),
                 Text(
                   vpnController.selectedServer!.country,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    color: AppColors.hintColor,
-                  ),
+                  style: TextStyle(fontSize: 18, color: AppColors.hintColor),
                 ),
               ],
             )
           else
-            const Text(
+            Text(
               Strings.selectServer,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           const Spacer(),
           VpnButton(
