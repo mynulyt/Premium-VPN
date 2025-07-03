@@ -1,6 +1,5 @@
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:premium_vpn/models/user_model.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SubscriptionService {
