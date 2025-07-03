@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pree_vpn/models/server_model.dart';
+import 'package:pree_vpn/widgets/server_title.dart';
 import 'package:provider/provider.dart';
-import 'package:premium_vpn/controllers/vpn_controller.dart';
-import 'package:premium_vpn/models/server_model.dart';
-import 'package:premium_vpn/widgets/server_tile.dart';
-import 'package:premium_vpn/constants/strings.dart';
 
 class ServerListPage extends StatelessWidget {
   const ServerListPage({super.key});
