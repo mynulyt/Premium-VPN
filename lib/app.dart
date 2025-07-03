@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pree_vpn/views/home_page.dart';
+import 'package:pree_vpn/views/login_page.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
